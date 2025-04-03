@@ -9,7 +9,7 @@ struct Etudiant {
     int CNE;
     float notes[5];
 
-    // Fonction pour créer un étudiant
+    
     void creer() {
         cout << "Nom: ";
         cin >> nom;
@@ -23,7 +23,7 @@ struct Etudiant {
         }
     }
 
-    // Retourne la plus grande note
+    
     float getMaxNote() {
         float max = notes[0];
         for (int i = 1; i < 5; i++) {
@@ -32,7 +32,7 @@ struct Etudiant {
         return max;
     }
 
-    // Retourne la plus petite note
+    
     float getMinNote() {
         float min = notes[0];
         for (int i = 1; i < 5; i++) {
@@ -41,7 +41,7 @@ struct Etudiant {
         return min;
     }
 
-    // Retourne la moyenne des notes
+    
     float getMoyenneNote() {
         float somme = 0;
         for (int i = 0; i < 5; i++) {
@@ -50,7 +50,7 @@ struct Etudiant {
         return somme / 5;
     }
 
-    // Retourne le pourcentage de notes >= 10
+    
     float getQuota() {
         int count = 0;
         for (int i = 0; i < 5; i++) {
@@ -59,7 +59,6 @@ struct Etudiant {
         return (count / 5.0) * 100;
     }
 
-    // Affiche les informations de l'étudiant
     void affiche() {
         cout << "Etudiant: " << prenom << " " << nom << " (CNE: " << CNE << ")\n";
         cout << "Notes: ";
@@ -72,7 +71,7 @@ struct Etudiant {
 };
 
 int main() {
-    // Création d'un tableau d'étudiants
+    
     int n;
     cout << "Nombre d'etudiants : ";
     cin >> n;
@@ -83,7 +82,7 @@ int main() {
         etudiants[i].creer();
     }
 
-    // Affichage des étudiants
+    
     cout << "\n--- Liste des etudiants ---\n";
     for (int i = 0; i < n; i++) {
         etudiants[i].affiche();
